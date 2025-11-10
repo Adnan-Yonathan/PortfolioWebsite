@@ -1,5 +1,3 @@
-const path = require("path");
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -10,13 +8,6 @@ const nextConfig = {
         hostname: "images.unsplash.com",
       },
     ],
-  },
-  webpack(config) {
-    config.resolve.alias["three/examples/js/libs/stats.min"] = path.resolve(
-      __dirname,
-      "./lib/three-stats-shim.js"
-    );
-    return config;
   },
 };
 
