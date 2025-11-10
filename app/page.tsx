@@ -1,4 +1,5 @@
 import { Hero } from "@/components/ui/animated-hero";
+import { HeroScrollDemo } from "@/components/ui/hero-scroll-demo";
 
 const services = [
   {
@@ -159,6 +160,10 @@ export default function HomePage() {
               </article>
             ))}
           </div>
+        </section>
+
+        <section className="space-y-12">
+          <HeroScrollDemo />
         </section>
 
         <section className="rounded-3xl border border-white/5 bg-white/5 p-8 space-y-6">
