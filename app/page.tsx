@@ -1,4 +1,4 @@
-import { Hero } from "@/components/ui/animated-hero";
+import { HeroSection } from "@/components/ui/hero-section-1";
 
 const services = [
   {
@@ -51,7 +51,7 @@ const workShowcase = [
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
-      <Hero />
+      <HeroSection />
       <main className="px-4 pt-12 pb-20 lg:px-12 space-y-20">
         <section id="services">
           <div className="space-y-3 mb-8 max-w-3xl">
