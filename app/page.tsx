@@ -1,5 +1,4 @@
 import { Hero } from "@/components/ui/animated-hero";
-import { HeroScrollDemo } from "@/components/ui/hero-scroll-demo";
 
 const services = [
   {
@@ -46,24 +45,6 @@ const workShowcase = [
       "Component library ready for frequent updates",
       "Accessibility-first interactions",
     ],
-  },
-];
-
-const process = [
-  {
-    step: "Discovery",
-    body:
-      "Audit your presence, clarify goals, and map the moments that matter most to your visitors.",
-  },
-  {
-    step: "Design",
-    body:
-      "Wireframes, prototypes, and high-fidelity screens that keep your team aligned while we add polish.",
-  },
-  {
-    step: "Delivery",
-    body:
-      "We collaborate with your engineers or build the site ourselves and provide clear documentation.",
   },
 ];
 
@@ -123,34 +104,6 @@ export default function HomePage() {
                     <li key={bullet}>{bullet}</li>
                   ))}
                 </ul>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="space-y-12">
-          <HeroScrollDemo />
-        </section>
-
-        <section className="rounded-3xl border border-white/5 bg-white/5 p-8 space-y-6">
-          <div className="space-y-1">
-            <p className="text-xs uppercase tracking-[0.3em] text-slate-400">
-              Process
-            </p>
-            <h2 className="text-3xl font-semibold">
-              Simple collaboration, ambitious results.
-            </h2>
-          </div>
-          <div className="grid gap-4 md:grid-cols-3">
-            {process.map((item) => (
-              <article
-                key={item.step}
-                className="rounded-2xl border border-white/5 bg-slate-900/50 p-5 space-y-2"
-              >
-                <p className="text-xs uppercase tracking-[0.3em] text-slate-500">
-                  {item.step}
-                </p>
-                <p className="text-slate-300 leading-relaxed">{item.body}</p>
               </article>
             ))}
           </div>
