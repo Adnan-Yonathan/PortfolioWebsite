@@ -50,42 +50,6 @@ export function HeroSection() {
             <div className="absolute left-0 top-0 h-[80rem] w-56 -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.06)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)] [translate:5%_-50%]" />
             <div className="absolute left-0 top-0 h-[80rem] w-56 -translate-y-[350px] -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.04)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)]" />
           </div>
-          <AnimatedGroup
-            variants={{
-              container: {
-                visible: {
-                  transition: {
-                    delayChildren: 1,
-                  },
-                },
-              },
-              item: {
-                hidden: {
-                  opacity: 0,
-                  y: 20,
-                },
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                  transition: {
-                    type: "spring",
-                    bounce: 0.3,
-                    duration: 2,
-                  },
-                },
-              },
-            }}
-            className="absolute inset-0 -z-20"
-          >
-            <Image
-              src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1440&q=80"
-              alt="background tabletop with devices"
-              className="absolute inset-x-0 top-56 -z-20 hidden lg:top-32 dark:block"
-              width={3276}
-              height={4095}
-              priority
-            />
-          </AnimatedGroup>
           <div className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--background)_75%)]" />
           <div className="mx-auto max-w-7xl px-6">
             <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
@@ -145,46 +109,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          <AnimatedGroup
-            variants={{
-              container: {
-                visible: {
-                  transition: {
-                    staggerChildren: 0.05,
-                    delayChildren: 0.75,
-                  },
-                },
-              },
-              ...transitionVariants,
-            }}
-          >
-            <div className="relative -mr-56 mt-8 overflow-hidden px-2 sm:mr-0 sm:mt-12 md:mt-20">
-              <div
-                aria-hidden
-                className="absolute inset-0 z-10 flex h-full w-full bg-gradient-to-b from-transparent via-background/30 to-background"
-              />
-              <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border border-white/5 p-4 shadow-lg shadow-zinc-950/15 ring-1">
-              <div className="relative">
-                <Image
-                  className="bg-background aspect-[15/8] w-full rounded-2xl object-cover"
-                  src="https://images.unsplash.com/photo-1582719478170-3282a5c9e89b?auto=format&fit=crop&w=1400&q=80"
-                  alt="Agency team brainstorming"
-                  width={2700}
-                  height={1440}
-                  priority
-                />
-                <Image
-                  className="absolute inset-0 hidden rounded-2xl object-cover dark:block"
-                  src="https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=3840&q=80"
-                  alt="Agency team brainstorming dark"
-                  width={3840}
-                  height={2160}
-                  priority
-                />
-              </div>
-              </div>
-            </div>
-          </AnimatedGroup>
+          {/* Image section removed to maintain minimalist hero */}
         </div>
       </main>
     </>
