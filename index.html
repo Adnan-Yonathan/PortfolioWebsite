@@ -23,12 +23,21 @@
       </div>
     </nav>
     <div class="hero-content">
+      <div class="hero-top-cta">
+        <button class="pill secondary">Read our launch article</button>
+      </div>
       <p class="eyebrow">Web design agency</p>
-      <h1>We craft digital identities that feel alive.</h1>
+      <h1 class="hero-title">
+        <span class="hero-title-primary">We craft digital identities that feel</span>
+        <span class="hero-title-dynamic">
+          <span id="dynamic-word">captivating</span>
+        </span>
+      </h1>
       <p class="lead">
         Studio Elemental helps ambitious brands capture attention with purposeful
         web experiences, from launch strategy through implementation and
-        post-launch listening.
+        post-launch listening. We deliver modern product storytelling that stays
+        on brand and performs under real traffic.
       </p>
       <div class="hero-cta">
         <a class="btn primary" href="#contact">Book a call</a>
@@ -190,5 +199,31 @@
       </div>
     </div>
   </footer>
+  <script>
+    (function () {
+      const words = [
+        "captivating",
+        "strategic",
+        "bold",
+        "intentional",
+        "future-ready",
+      ];
+      const element = document.getElementById("dynamic-word");
+      let current = 0;
+
+      element.textContent = words[current];
+
+      setInterval(() => {
+        element.classList.add("fade-out");
+        setTimeout(() => {
+          current = (current + 1) % words.length;
+          element.textContent = words[current];
+          element.classList.remove("fade-out");
+          element.classList.add("fade-in");
+          setTimeout(() => element.classList.remove("fade-in"), 250);
+        }, 200);
+      }, 2300);
+    })();
+  </script>
 </body>
 </html>
