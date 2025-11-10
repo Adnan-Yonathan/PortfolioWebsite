@@ -7,8 +7,9 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { AnimatedGroup } from "@/components/ui/animated-group";
 import { cn } from "@/lib/utils";
+import type { Variants } from "framer-motion";
 
-const transitionVariants = {
+const transitionVariants: { item: Variants } = {
   item: {
     hidden: {
       opacity: 0,
