@@ -1,5 +1,6 @@
 import { Hero } from "@/components/ui/animated-hero";
 import { HeroScrollDemo } from "@/components/ui/hero-scroll-demo";
+import { DotShaderDemo } from "@/components/ui/dot-shader-demo";
 
 const services = [
   {
@@ -164,6 +165,10 @@ export default function HomePage() {
 
         <section className="space-y-12">
           <HeroScrollDemo />
+        </section>
+
+        <section className="space-y-12">
+          <DotShaderDemo />
         </section>
 
         <section className="rounded-3xl border border-white/5 bg-white/5 p-8 space-y-6">
