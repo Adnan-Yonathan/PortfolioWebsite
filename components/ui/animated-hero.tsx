@@ -66,9 +66,9 @@ function Hero() {
             </span>
           </h1>
           <p className="text-base leading-relaxed text-slate-300 sm:text-lg">
-            Managing a small business today is tough. Replace outdated, tedious
-            trade methods with thoughtful digital experiences that are easier and
-            faster to run.
+            Managing a home service business, agency, or software company today
+            is tough. Replace outdated, tedious trade methods with thoughtful
+            digital experiences that are easier and faster to run.
           </p>
         </div>
         <div className="flex flex-wrap justify-center gap-3">

@@ -1,30 +1,29 @@
 import { Hero } from "@/components/ui/animated-hero";
 import { HeroScrollDemo } from "@/components/ui/hero-scroll-demo";
-import { DotShaderDemo } from "@/components/ui/dot-shader-demo";
 
 const services = [
   {
-    title: "Brand-forward Websites",
+    title: "Home Service Websites",
     body:
-      "Visual systems and layouts that let you tell your story with clarity, energy, and measurable outcomes.",
+      "Modern site foundations for plumbers, HVAC teams, and contractors—live routing, lead forms, and schedules that feel effortless.",
   },
   {
-    title: "Product Landing Pages",
+    title: "Agency Partnerships",
     body:
-      "Conversion-first experiences mixing animation, micro-interactions, and precise messaging to guide visitors.",
+      "Fractional design support for boutique agencies that need polished visuals, interaction kits, and rapid iterations.",
   },
   {
-    title: "Growth Kits",
+    title: "Software & Product Campaigns",
     body:
-      "Component libraries, decks, and CMS-ready builds so new sections can launch without missing a beat.",
+      "Product-focused marketing hubs with storytelling, motion, and analytics-ready sections for SaaS founders.",
   },
 ];
 
 const workShowcase = [
   {
     tag: "Research + Strategy",
-    title: "Future Farms",
-    body: "Immersive storytelling site for an urban agriculture studio.",
+    title: "Future Homes Collective",
+    body: "Immersive storytelling site for a home service collective offering landscaping and roofing.",
     bullets: [
       "Qualitative interviews and resonance testing",
       "Custom CMS for seasonal reporting",
@@ -33,7 +32,7 @@ const workShowcase = [
   {
     tag: "Product Launch",
     title: "Loomio Studios",
-    body: "Landing page with interactive data visualization panels.",
+    body: "Landing page with interactive data visualization panels for a creative agency platform.",
     bullets: [
       "Animated charts synced to scroll",
       "Performance-optimized build for global rollouts",
@@ -42,7 +41,7 @@ const workShowcase = [
   {
     tag: "Community Platform",
     title: "Signal Matter",
-    body: "Membership site with modular learning paths and events.",
+    body: "Membership site with modular learning paths and events for a software education brand.",
     bullets: [
       "Component library ready for frequent updates",
       "Accessibility-first interactions",
@@ -73,40 +72,6 @@ export default function HomePage() {
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <Hero />
       <main className="px-4 pt-12 pb-20 lg:px-12 space-y-20">
-        <section className="grid gap-10 lg:grid-cols-[1.2fr_1fr] bg-slate-900/70 border border-white/10 rounded-3xl p-10 backdrop-blur">
-          <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-slate-400 mb-2">
-              How we partner with bold teams
-            </p>
-            <h2 className="text-3xl font-semibold tracking-tight mb-4">
-              Strategic web design with a meticulous attention to detail.
-            </h2>
-            <p className="text-slate-400 leading-relaxed">
-              Every kickoff begins with research, UX architecture, alignment workshops, high-fidelity design, and an intentional handoff that keeps engineers moving fast.
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-3 gap-6">
-            <div className="rounded-2xl border border-white/5 p-5">
-              <p className="text-3xl font-semibold">12+</p>
-              <p className="text-xs uppercase tracking-[0.24em] text-slate-500 mt-1">
-                Years designing
-              </p>
-            </div>
-            <div className="rounded-2xl border border-white/5 p-5">
-              <p className="text-3xl font-semibold">40+</p>
-              <p className="text-xs uppercase tracking-[0.24em] text-slate-500 mt-1">
-                Websites delivered
-              </p>
-            </div>
-            <div className="rounded-2xl border border-white/5 p-5">
-              <p className="text-3xl font-semibold">100%</p>
-              <p className="text-xs uppercase tracking-[0.24em] text-slate-500 mt-1">
-                Accessibility reviewed
-              </p>
-            </div>
-          </div>
-        </section>
-
         <section id="services">
           <div className="space-y-3 mb-8 max-w-3xl">
             <p className="text-xs uppercase tracking-[0.3em] text-slate-400">
@@ -165,10 +130,6 @@ export default function HomePage() {
 
         <section className="space-y-12">
           <HeroScrollDemo />
-        </section>
-
-        <section className="space-y-12">
-          <DotShaderDemo />
         </section>
 
         <section className="rounded-3xl border border-white/5 bg-white/5 p-8 space-y-6">
