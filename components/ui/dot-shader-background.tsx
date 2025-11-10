@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo } from "react";
 import { Canvas, ThreeEvent, useFrame, useThree } from "@react-three/fiber";
-import { shaderMaterial, useTrailTexture } from "@react-three/drei";
+import { shaderMaterial } from "@react-three/drei";
 import { useTheme } from "next-themes";
 import * as THREE from "three";
 
@@ -125,17 +125,12 @@ function Scene() {
 
   const themeColors = getThemeColors();
 
-  const [trail, onMove] = useTrailTexture({
-    size: 512,
-    radius: 0.1,
-    maxAge: 400,
-    interpolate: 1,
-    ease: function easeInOutCirc(x) {
-      return x < 0.5
-        ? (1 - Math.sqrt(1 - Math.pow(2 * x, 2))) / 2
-        : (Math.sqrt(1 - Math.pow(-2 * x + 2, 2)) + 1) / 2;
-    },
-  });
+  const trail = useMemo(() => {
+    const data = new Uint8Array(4);
+    const texture = new THREE.DataTexture(data, 1, 1, THREE.RGBAFormat);
+    texture.needsUpdate = true;
+    return texture;
+  }, []);
 
   const dotMaterial = useMemo(() => new DotMaterial(), []);
 
@@ -153,8 +148,8 @@ function Scene() {
     dotMaterial.uniforms.time.value = state.clock.elapsedTime;
   });
 
-  const handlePointerMove = (event: ThreeEvent<PointerEvent>) => {
-    onMove(event);
+  const handlePointerMove = (_event: ThreeEvent<PointerEvent>) => {
+    trail.needsUpdate = true;
   };
 
   const scale = Math.max(viewport.width, viewport.height) / 2;
